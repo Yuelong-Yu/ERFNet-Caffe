@@ -1,5 +1,5 @@
 # ERFNet-Caffe-version
-Implementation of the ERFNet for Real-Time Semantic Segmentation in caffe
+Implementation of the Efficient Residual Factorized ConvNet for Real-time Semantic Segmentation in caffe
 
 ## Publications<br>
 The deep neural network architecture is based on the following publication:<br>

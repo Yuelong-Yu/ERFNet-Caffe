@@ -11,7 +11,6 @@ __email__ = 'yuyuelongfly@163.com'
 __data__ = '11th September, 2018'
 # The original version of the script is by Sanghoon Hong, https://github.com/sanghoon/pva-faster-rcnn/blob/master/tools/gen_merged_model.py 
 
-
 import numpy as np
 import sys
 import os
@@ -19,7 +18,7 @@ import os.path as osp
 import google.protobuf as pb
 from argparse import ArgumentParser
 import sys
-caffe_root = '/home/yly/ENet/caffe-enet/' # Change to your Caffe directory 
+caffe_root = '/ERFNet-Caffe/caffe-erfnet/' # Change to your Caffe directory 
 sys.path.insert(0, caffe_root + 'python') 
 import caffe
     

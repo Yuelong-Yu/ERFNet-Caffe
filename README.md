@@ -18,11 +18,16 @@ $ python test_segmentation.py 	--model ERFNet-Caffe/prototxts/erfnet_deploy_merg
 				--input_image ERFNet-Caffe/example_image/munich_000000_000019_leftImg8bit.png \
 				--out_dir ERFNet-Caffe/example_image/ 
 ```
-## Training ERFNet<br>
-Compile ERFNet-Caffe/caffe-erfnet for training. Caffe-erfnet combines the interp layer in [PSPNet](https://github.com/hszhao/PSPNet/) and DenseImageData layer in [caffe-enet
-](https://github.com/TimoSaemann/caffe-enet/tree/22d356c956cdc5e752e6d40612e4f6c60fc8f471/) to create auxiliary loss and data interface, respectively.
 
-Start the training from scratch:<br>
+## Training ERFNet<br>
+- Compile ERFNet-Caffe/caffe-erfnet for training. Caffe-erfnet combines the interp layer in [PSPNet](https://github.com/hszhao/PSPNet/) and DenseImageData layer in [caffe-enet
+](https://github.com/TimoSaemann/caffe-enet/tree/22d356c956cdc5e752e6d40612e4f6c60fc8f471/) to create auxiliary loss and data interface, respectively.<br>
+
+- Change your net directory and snapshot_prefix directory in ERFNet-Caffe/prototxts/erfnet_solver.prototxt;<br>
+- Change your source directory in ERFNet-Caffe/prototxts/erfnet_train_val.prototxt;<br>
+- Change your directory of cityscapes data (images and labels) in ERFNet-Caffe/dataset/train_fine_cityscapes.txt and ERFNet-Caffe/dataset/eval_fine_cityscapes.txt. <br>
+
+- Start the training from scratch:<br>
 ```
 $ ERFNet-Caffe/caffe-erfnet/build/tools/caffe train -solver /ERFNet-Caffe/prototxts/erfnet_solver.prototxt
 ```

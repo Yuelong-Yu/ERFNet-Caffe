@@ -21,7 +21,7 @@ from argparse import ArgumentParser
 from os.path import join
 import argparse
 import sys
-caffe_root = '/home/yly/ENet/caffe-enet/'   # Change to your Caffe directory 
+caffe_root = '/ERFNet-Caffe/caffe-erfnet/'   # Change to your Caffe directory 
 sys.path.insert(0, caffe_root + 'python')
 import caffe
 sys.path.append('/usr/local/lib/python2.7/site-packages')

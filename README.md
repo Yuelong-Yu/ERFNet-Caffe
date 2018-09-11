@@ -2,9 +2,9 @@
 Implementation of the Efficient Residual Factorized ConvNet for Real-time Semantic Segmentation in caffe
 
 Test image from Cityscapes dataset<br>
-<img src="https://github.com/Yuelong-Yu/ERFNet-Caffe/blob/master/example_image/munich_000000_000019_leftImg8bit.png" width="256" height="128" alt="Test image from Cityscapes dataset"/>
+<img src="https://github.com/Yuelong-Yu/ERFNet-Caffe/blob/master/example_image/munich_000000_000019_leftImg8bit.png" width="512" height="256" alt="Test image from Cityscapes dataset"/><br>
 Semantic Segmentation of ERFNet<br>
-<img src="https://github.com/Yuelong-Yu/ERFNet-Caffe/blob/master/example_image/munich_000000_000019_leftImg8bit_erfnet.png" width="256" height="128" alt="Semantic Segmentation of ERFNet"/>
+<img src="https://github.com/Yuelong-Yu/ERFNet-Caffe/blob/master/example_image/munich_000000_000019_leftImg8bit_erfnet.png" width="512" height="256" alt="Semantic Segmentation of ERFNet"/>
 
 
 ## Publications<br>

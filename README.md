@@ -50,3 +50,12 @@ $ python merge_bn_scale_droupout.py 	--model ERFNet-Caffe/prototxts/erfnet_deplo
 				--output_model ERFNet-Caffe/prototxts/erfnet_deploy_mergebn.prototxt \
 				--output_weights ERFNet-Caffe/weights/erfnet_cityscapes_mergebn.caffemodel
 ```
+
+## Create video (optional)<br>
+By running ERFNet-Caffe/scripts/rename_images.py, a sequence of images in a file are renamed into the formate of 0000.png,0001.png,0002.png etc.
+Execute ERFNet-Caffe/scripts/webcam_demo.py to write the predictions into video:
+```
+$ python webcam_demo.py 	--model ERFNet-Caffe/prototxts/erfnet_deploy_mergebn.prototxt \
+				--weights ERFNet-Caffe/weights/erfnet_cityscapes_mergebn.caffemodel \
+				--colours ERFNet-Caffe/scripts/cityscapes19.png
+```

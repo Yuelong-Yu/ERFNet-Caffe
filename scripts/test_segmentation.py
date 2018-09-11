@@ -36,12 +36,12 @@ def make_parser():
     parser.add_argument('--weights', type=str, default='/home/yly/ERFNet/weights/snapshots_encoder/erfnet_encoder_cityscapes.caffemodel')
     '''
     ##-----------------decoder:Change the following directories----------------
-    parser.add_argument('--model', type=str, default='/home/yly/ERFNet/prototxts/erfnet_deploy_mergebn.prototxt')
-    parser.add_argument('--weights', type=str, default='/home/yly/ERFNet/weights/erfnet_cityscapes_mergebn.caffemodel')
+    parser.add_argument('--model', type=str, default='/ERFNet-Caffe/prototxts/erfnet_deploy_mergebn.prototxt')
+    parser.add_argument('--weights', type=str, default='/ERFNet-Caffe/weights/erfnet_cityscapes_mergebn.caffemodel')
 
-    parser.add_argument('--colours', type=str, default='/home/yly/ERFNet/scripts/cityscapes19.png') #Load look up table to map various classes into predefined color
-    parser.add_argument('--input_image', type=str, default='/home/yly/ERFNet/example_image/munich_000000_000019_leftImg8bit.png')
-    parser.add_argument('--out_dir', type=str, default='/home/yly/ERFNet/example_image/')
+    parser.add_argument('--colours', type=str, default='/ERFNet-Caffe/scripts/cityscapes19.png') #Load look up table to map various classes into predefined color
+    parser.add_argument('--input_image', type=str, default='/ERFNet-Caffe/example_image/munich_000000_000019_leftImg8bit.png')
+    parser.add_argument('--out_dir', type=str, default='/ERFNet-Caffe/example_image/')
     parser.add_argument('--gpu', type=int, default=0, help='0: gpu mode active, else gpu mode inactive')
 
     return parser

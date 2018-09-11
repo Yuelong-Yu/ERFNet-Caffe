@@ -18,3 +18,15 @@ $ python test_segmentation.py 	--model ERFNet/prototxts/erfnet_deploy_mergebn.pr
 				--input_image ERFNet/example_image/munich_000000_000019_leftImg8bit.png \
 				--out_dir ERFNet/example_image/ 
 ```
+## Training ENet<br>
+The interp layer in [PSPNet](https://github.com/hszhao/PSPNet/) is used to create auxiliary loss; and DenseImageData layer in [caffe-enet
+](https://github.com/TimoSaemann/caffe-enet/tree/22d356c956cdc5e752e6d40612e4f6c60fc8f471/) is employed for data interface.
+
+Start the training from scratch:<br>
+```
+$ ERFNet/caffe-enet/build/tools/caffe train -solver /ERFNet/prototxts/erfnet_solver.prototxt
+```
+or start the training with the pretrained model:<br>
+```
+$ ERFNet/caffe-enet/build/tools/caffe train -solver /ERFNet/prototxts/erfnet_solver.prototxt -snapshot /ERFNet/weights/erfnet_cityscapes.caffemodel
+```

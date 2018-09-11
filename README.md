@@ -24,9 +24,9 @@ The interp layer in [PSPNet](https://github.com/hszhao/PSPNet/) is used to creat
 
 Start the training from scratch:<br>
 ```
-$ ERFNet/caffe-enet/build/tools/caffe train -solver /ERFNet/prototxts/erfnet_solver.prototxt
+$ ERFNet/caffe-erfnet/build/tools/caffe train -solver /ERFNet/prototxts/erfnet_solver.prototxt
 ```
 or start the training with the pretrained model:<br>
 ```
-$ ERFNet/caffe-enet/build/tools/caffe train -solver /ERFNet/prototxts/erfnet_solver.prototxt -snapshot /ERFNet/weights/erfnet_cityscapes.caffemodel
+$ ERFNet/caffe-erfnet/build/tools/caffe train -solver /ERFNet/prototxts/erfnet_solver.prototxt -snapshot /ERFNet/weights/erfnet_cityscapes.caffemodel
 ```

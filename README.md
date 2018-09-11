@@ -12,11 +12,11 @@ Several modifications were made:<br>
 Firstly, change caffe_root in ERFNet-Caffe/scripts/test_segmentation.py to the absolute path of caffe; the original caffe version [BVLC/caffe](https://github.com/BVLC/caffe/) is enough for prediction.<br>
 After that, you can visualize the prediction of ERFNet by running:
 ```
-$ python test_segmentation.py 	--model ERFNet/prototxts/erfnet_deploy_mergebn.prototxt \
-				--weights ERFNet/weights/erfnet_cityscapes_mergebn.caffemodel\
-				--colours ERFNet/scripts/cityscapes19.png \
-				--input_image ERFNet/example_image/munich_000000_000019_leftImg8bit.png \
-				--out_dir ERFNet/example_image/ 
+$ python test_segmentation.py 	--model ERFNet-Caffe/prototxts/erfnet_deploy_mergebn.prototxt \
+				--weights ERFNet-Caffe/weights/erfnet_cityscapes_mergebn.caffemodel\
+				--colours ERFNet-Caffe/scripts/cityscapes19.png \
+				--input_image ERFNet-Caffe/example_image/munich_000000_000019_leftImg8bit.png \
+				--out_dir ERFNet-Caffe/example_image/ 
 ```
 ## Training ERFNet<br>
 Compile ERFNet-Caffe/caffe-erfnet for training. Caffe-erfnet combines the interp layer in [PSPNet](https://github.com/hszhao/PSPNet/) and DenseImageData layer in [caffe-enet
@@ -29,4 +29,13 @@ $ ERFNet-Caffe/caffe-erfnet/build/tools/caffe train -solver /ERFNet-Caffe/protot
 or start the training with the pretrained model:<br>
 ```
 $ ERFNet-Caffe/caffe-erfnet/build/tools/caffe train -solver /ERFNet-Caffe/prototxts/erfnet_solver.prototxt -snapshot /ERFNet-Caffe/weights/erfnet_cityscapes.caffemodel
+```
+
+## Accelerate prediction (optional)<br>
+Merge BatchNorm & Scale layers into Convolution layers; and remove dropout layer in test phase to accelerate prediction
+```
+$ python merge_bn_scale_droupout.py 	--model ERFNet-Caffe/prototxts/erfnet_deploy.prototxt \
+				--weights ERFNet-Caffe/weights/erfnet_cityscapes.caffemodel\
+				--output_model ERFNet-Caffe/prototxts/erfnet_deploy_mergebn.prototxt \
+				--output_weights ERFNet-Caffe/weights/erfnet_cityscapes_mergebn.caffemodel
 ```

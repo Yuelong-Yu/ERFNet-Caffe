@@ -28,7 +28,7 @@ $ python test_segmentation.py 	--model ERFNet-Caffe/prototxts/erfnet_deploy_merg
 ## Training ERFNet<br>
 - Compile ERFNet-Caffe/caffe-erfnet for training. Caffe-erfnet combines the interp layer in [PSPNet](https://github.com/hszhao/PSPNet/) and DenseImageData layer in [caffe-enet
 ](https://github.com/TimoSaemann/caffe-enet/tree/22d356c956cdc5e752e6d40612e4f6c60fc8f471/) to create auxiliary loss and data interface, respectively.<br>
-- Execute createTrainIdLabelImgs.py to create the trainIDLabel Images for training. (The work is based on Marius Cordts' work [cityscapesScripts
+- Execute ERFNet-Caffe/scripts/createTrainIdLabelImgs.py to create the trainIDLabel Images for training. (The script is from Marius Cordts' work [cityscapesScripts
 ](https://github.com/mcordts/cityscapesScripts/))<br>
 - Change your net directory and snapshot_prefix directory in ERFNet-Caffe/prototxts/erfnet_solver.prototxt;<br>
 - Change your source directory in ERFNet-Caffe/prototxts/erfnet_train_val.prototxt;<br>
@@ -62,7 +62,6 @@ $ python webcam_demo.py 	--model ERFNet-Caffe/prototxts/erfnet_deploy_mergebn.pr
 ```
 
 ## Evaluation mIoU<br>
-The evalution is based on Marius Cordts' work [cityscapesScripts
-](https://github.com/mcordts/cityscapesScripts/)<br>
 - Firstly, execute ERFNet-Caffe/scripts/test_segmentation_iter.py to save the predicted trainID labels.<br>
-- Secondly, execute ERFNet-Caffe/scripts/evalPixelLevelSemanticLabeling_trainId.py to evaluate classes-IoU, mIoU and categories Iou
+- Secondly, execute ERFNet-Caffe/scripts/evalPixelLevelSemanticLabeling_trainId.py to evaluate classes-IoU, mIoU and categories Iou. (The bases of the script are Marius Cordts' work [cityscapesScripts
+](https://github.com/mcordts/cityscapesScripts/))<br>

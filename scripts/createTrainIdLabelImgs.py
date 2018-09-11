@@ -24,7 +24,7 @@ from __future__ import print_function
 import os, glob, sys
 
 # cityscapes imports
-sys.path.append( os.path.normpath( os.path.join( os.path.dirname( __file__ ) , '..' , 'helpers') ) )
+sys.path.append( os.path.normpath( os.path.join( os.path.dirname( __file__ ) , 'helpers') ) )
 
 print(sys.path)
 

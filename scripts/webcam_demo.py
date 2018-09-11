@@ -22,7 +22,7 @@ import sys
 import time
 
 sys.path.append('/usr/local/lib/python2.7/site-packages')
-caffe_root = '/home/yly/ENet/caffe-enet/'        # Change to your Caffe directory 
+caffe_root = '/ERFNet-Caffe/caffe-erfnet/'        # Change to your Caffe directory 
 sys.path.insert(0, caffe_root + 'python')
 import caffe
 
@@ -105,8 +105,8 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, default='/home/yly/ERFNet/prototxts/erfnet_deploy_mergebn.prototxt')
-    parser.add_argument('--weights', type=str, default='/home/yly/ERFNet/weights/erfnet_cityscapes_mergebn.caffemodel')
-    parser.add_argument('--colours', type=str, default='/home/yly/ERFNet/scripts/cityscapes19.png')
+    parser.add_argument('--model', type=str, default='/ERFNet-Caffe/prototxts/erfnet_deploy_mergebn.prototxt')
+    parser.add_argument('--weights', type=str, default='/ERFNet-Caffe/weights/erfnet_cityscapes_mergebn.caffemodel')
+    parser.add_argument('--colours', type=str, default='/ERFNet-Caffe/scripts/cityscapes19.png')
     args = parser.parse_args()
     main(args)

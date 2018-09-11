@@ -1,6 +1,11 @@
 # ERFNet-Caffe-version
 Implementation of the Efficient Residual Factorized ConvNet for Real-time Semantic Segmentation in caffe
 
+Test image from Cityscapes dataset
+![example_image](https://github.com/Yuelong-Yu/ERFNet-Caffe/blob/master/example_image/munich_000000_000019_leftImg8bit.png)
+Semantic Segmentation of ERFNet
+![example_image_prediction](https://github.com/Yuelong-Yu/ERFNet-Caffe/blob/master/example_image/munich_000000_000019_leftImg8bit_erfnet.png)
+
 ## Publications<br>
 The deep neural network architecture is based on the following publication:<br>
 "ERFNet: Efficient Residual Factorized ConvNet for Real-time Semantic Segmentation", E. Romera, J. M. Alvarez, L. M. Bergasa and R. Arroyo, Transactions on Intelligent Transportation Systems (T-ITS), December 2017. <br>

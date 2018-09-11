@@ -19,14 +19,14 @@ $ python test_segmentation.py 	--model ERFNet/prototxts/erfnet_deploy_mergebn.pr
 				--out_dir ERFNet/example_image/ 
 ```
 ## Training ERFNet<br>
-The interp layer in [PSPNet](https://github.com/hszhao/PSPNet/) is used to create auxiliary loss; and DenseImageData layer in [caffe-enet
-](https://github.com/TimoSaemann/caffe-enet/tree/22d356c956cdc5e752e6d40612e4f6c60fc8f471/) is employed for data interface.
+Compile ERFNet-Caffe/caffe-erfnet for training. Caffe-erfnet combines the interp layer in [PSPNet](https://github.com/hszhao/PSPNet/) and DenseImageData layer in [caffe-enet
+](https://github.com/TimoSaemann/caffe-enet/tree/22d356c956cdc5e752e6d40612e4f6c60fc8f471/) to create auxiliary loss and data interface, respectively.
 
 Start the training from scratch:<br>
 ```
-$ ERFNet/caffe-erfnet/build/tools/caffe train -solver /ERFNet/prototxts/erfnet_solver.prototxt
+$ ERFNet-Caffe/caffe-erfnet/build/tools/caffe train -solver /ERFNet-Caffe/prototxts/erfnet_solver.prototxt
 ```
 or start the training with the pretrained model:<br>
 ```
-$ ERFNet/caffe-erfnet/build/tools/caffe train -solver /ERFNet/prototxts/erfnet_solver.prototxt -snapshot /ERFNet/weights/erfnet_cityscapes.caffemodel
+$ ERFNet-Caffe/caffe-erfnet/build/tools/caffe train -solver /ERFNet-Caffe/prototxts/erfnet_solver.prototxt -snapshot /ERFNet-Caffe/weights/erfnet_cityscapes.caffemodel
 ```

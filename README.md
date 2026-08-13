@@ -40,7 +40,7 @@ $ ERFNet-Caffe/caffe-erfnet/build/tools/caffe train -solver /ERFNet-Caffe/protot
 ```
 or start the training with the pretrained model:<br>
 ```
-$ ERFNet-Caffe/caffe-erfnet/build/tools/caffe train -solver /ERFNet-Caffe/prototxts/erfnet_solver.prototxt -snapshot /ERFNet-Caffe/weights/erfnet_cityscapes.caffemodel
+$ ERFNet-Caffe/caffe-erfnet/build/tools/caffe train -solver /ERFNet-Caffe/prototxts/erfnet_solver.prototxt -weights /ERFNet-Caffe/weights/erfnet_cityscapes.caffemodel
 ```
 
 ## Accelerate prediction (optional)<br>
